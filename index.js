@@ -1,8 +1,14 @@
-function takeANumber(lineOfPeople, PersonName){
-  let i;
-  lineOfPeople.push(PersonName)
-  return `Welcome, ${PersonName}. You are number ${lineOfPeople.length} in line.`
+let customer = 0
+function takeANumber(){
+  // increment customer by 1 
+  customer++ 
+  return `Order Number ${customer}`
 }
+
+console.log(takeANumber())
+console.log(takeANumber())
+console.log(takeANumber())
+
 
 function nowServing(lineOfPeople){
   let headOfLine = 0
@@ -23,8 +29,9 @@ function currentLine(lineOfPeople){
         line += ` ${i+1}. ${lineOfPeople[i]},`
       }
     }
+    return line 
   } else {
     return "The line is currently empty."
   }
-  return line
+  // return line
 }
